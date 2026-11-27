@@ -25,12 +25,32 @@
   .bloque .boton { margin-top: 4px; }
   .linea-boton { border-color: var(--teal); color: var(--teal); }
   .linea-boton:hover { background: var(--teal); color: #fff; }
+  .paso0 { display: grid; grid-template-columns: 64px 1fr; gap: 22px; background: #fff; border: 1px solid var(--linea); border-left: 5px solid var(--menta); border-radius: 12px; padding: 26px 28px; margin-bottom: 40px; }
+  .paso0-num { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--teal); color: #fff; font: 700 30px Familjen, 'Segoe UI', sans-serif; }
+  .paso0 h2 { font-size: clamp(24px, 2.6vw, 32px); margin-bottom: 12px; }
+  .paso0 ol { margin: 0 0 18px; padding-left: 22px; color: var(--tinta); }
+  .paso0 li { margin-bottom: 6px; }
+  .paso0-nota { margin: 0; color: var(--gris); font-size: 15px; }
+  @media (max-width: 640px) { .paso0 { grid-template-columns: 1fr; } }
   @media (max-width: 900px) { .reproductor, .bloques { grid-template-columns: 1fr; } }
 </style></head><body>
 <header class="barra"><div class="ancho"><a class="marca" href="../index.html"><img src="../img/marca-clara.svg" alt="" width="52" height="31"><span>YKY</span></a></div></header>
 <main class="ancho empezar">
   <h1>Primeros pasos con YKY</h1>
-  <p class="intro">Bienvenida. En unos minutos verás cómo dejar YKY listo y cómo registrar tu primera sesión con una paciente, de principio a fin. Los datos que salen son inventados.</p>
+  <p class="intro">Bienvenida. Aquí tienes todo para empezar: instalar YKY, dejarlo listo y registrar tu primera sesión con una paciente, de principio a fin. Los datos que salen en los vídeos son inventados.</p>
+
+  <section class="paso0" aria-labelledby="paso0">
+    <div class="paso0-num">0</div>
+    <div>
+      <h2 id="paso0">Instala YKY</h2>
+      <ol>
+        <li>Abre el enlace que te he enviado por WhatsApp, descarga el instalador <strong>YKY HealthTech Setup</strong> y ábrelo.</li>
+        <li>Si Windows muestra «Windows protegió su PC», pulsa <strong>Más información</strong> y después <strong>Ejecutar de todas formas</strong>. Es normal: el instalador aún no tiene firma comercial.</li>
+        <li>Lee y acepta las condiciones de uso, pulsa <strong>Instalar</strong> y, al terminar, <strong>Finalizar</strong>: YKY se abre solo. Sigue con el capítulo 1.</li>
+      </ol>
+      <p class="paso0-nota">Necesitas Windows 10 u 11. Si no encuentras el enlace, escríbeme y te lo vuelvo a enviar.</p>
+    </div>
+  </section>
 
   <div class="reproductor">
     <div class="pantalla">
