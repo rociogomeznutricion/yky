@@ -142,4 +142,21 @@ footer { background: var(--noche); color: var(--niebla); padding: 36px 0 90px; f
   .taller, .garantias, .hechos, .hechos.una, .lados { grid-template-columns: minmax(0, 1fr); } .movil { max-width: 320px; margin: 0 auto; width: 100%; } .mesa-izq, .mesa-der, .lado { padding: 22px 20px; } .nube { border-right: 0; border-bottom: 1px solid rgba(255, 255, 255, .25); } .com { grid-template-columns: 24px minmax(0, 1fr) 62px; } .com .barr { grid-column: 2 / -1; grid-row: 2; } .com .cambio { margin: 0; } .lado { min-height: 0; } .doble { padding-right: 40px; } .carta p { margin-right: 0; } .carta .resp { margin-left: 0; } form#formDemo { padding: 22px 20px; } footer .ancho { grid-template-columns: 1fr; }
   .fijo { display: block; position: fixed; left: 16px; right: 16px; bottom: max(14px, env(safe-area-inset-bottom)); text-align: center; z-index: 40; padding: 13px; transition: transform .25s; } .fijo.fuera { transform: translateY(90px); }
 }
+/* Páginas de guía (SEO) e Instagram */
+.gratis { display: inline-block; background: var(--salvia); color: #08382f; border-radius: 999px; padding: 3px 12px; font-weight: 700; font-size: 15px; margin-right: 8px; }
+.cabecera { padding: clamp(48px, 7vw, 84px) 0; } .cabecera h1 { max-width: 24ch; } .cabecera .nota { color: var(--niebla); margin: 18px 0 0; }
+.migas { font-size: 15px; color: var(--niebla); margin: 0 0 18px; } .migas a { color: var(--niebla); } .migas a:hover { color: #fff; }
+.guia .dia { padding: clamp(52px, 6vw, 80px) 0; }
+.texto { max-width: 720px; } .texto h2 { margin-bottom: 18px; } .texto h3 { margin: 26px 0 8px; } .texto ul, .texto ol { padding-left: 1.25em; margin: 0 0 1em; } .texto li { margin-bottom: 8px; }
+.partido .texto { max-width: none; }
+.aparte { background: var(--claro); border-left: 3px solid var(--teal); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 22px 0; } .aparte p:last-child { margin: 0; }
+.guias { list-style: none; padding: 0; margin: 30px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.guias a { display: block; height: 100%; border: 1px solid var(--linea); border-radius: 8px; padding: 18px 20px; text-decoration: none; background: #fff; transition: border-color .18s; } .guias a:hover { border-color: var(--teal); }
+.guias b { display: block; font: 700 19px/1.25 Familjen, sans-serif; margin-bottom: 6px; } .guias span { color: #35545d; font-size: 16px; line-height: 1.45; }
+.insta { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: center; } .insta p { color: #e3f0ee; font-size: 19px; max-width: 32em; } .insta .nota { font-size: 15px; color: #c4dddb; }
+.insta .acciones { justify-content: flex-start; } .insta h2 { margin-bottom: 16px; }
+.marco.estrecha { max-width: 300px; justify-self: center; border: 7px solid var(--tinta); border-radius: 20px; }
+@media (max-width: 1000px) { .guias { grid-template-columns: 1fr 1fr; } .insta { grid-template-columns: minmax(0, 1fr); gap: 20px; } }
+@media (max-width: 640px) { .guias { grid-template-columns: minmax(0, 1fr); } }
+
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } html { scroll-behavior: auto; } }
