@@ -36,7 +36,16 @@
   .practica p { margin-bottom: 10px; }
   .practica ul { margin: 0; padding-left: 22px; }
   .practica li { margin-bottom: 4px; }
-  @media (max-width: 640px) { .paso0 { grid-template-columns: 1fr; } }
+  .crucial { background: var(--noche); color: #fff; border-radius: 12px; border-left: 6px solid var(--menta); padding: 28px 32px; margin: 0 0 30px; }
+  .crucial .marca-aviso { display: inline-block; background: var(--menta); color: #00272d; font-weight: 700; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; border-radius: 999px; padding: 3px 12px; margin-bottom: 12px; }
+  .crucial h2 { font-size: clamp(23px, 2.6vw, 31px); margin-bottom: 10px; color: #fff; }
+  .crucial > p { color: #dcebea; font-size: 18px; max-width: 46em; }
+  .crucial ul { list-style: none; padding: 0; margin: 18px 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 30px; }
+  .crucial li { border-top: 2px solid var(--menta); padding-top: 10px; color: #dcebea; font-size: 16px; line-height: 1.45; }
+  .crucial li strong { display: block; color: #fff; font-size: 17px; margin-bottom: 2px; }
+  .crucial .cierre { color: #fff; font-size: 17px; margin-bottom: 18px; }
+  .capitulos .imprescindible { display: inline-block; margin-top: 6px; background: var(--noche); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; border-radius: 999px; padding: 2px 9px; }
+  @media (max-width: 640px) { .paso0 { grid-template-columns: 1fr; } .crucial { padding: 22px 20px; } .crucial ul { grid-template-columns: 1fr; } }
   @media (max-width: 900px) { .reproductor, .bloques { grid-template-columns: 1fr; } }
 </style></head><body>
 <header class="barra"><div class="ancho"><a class="marca" href="../index.html"><img src="../img/marca-clara.svg" alt="" width="52" height="31"><span>YKY</span></a></div></header>
@@ -52,7 +61,7 @@
         <li>Abre el enlace que te he enviado por WhatsApp y descarga el instalador <strong>YKY HealthTech Setup</strong>. Google Drive avisa de que no puede analizarlo porque es grande: pulsa <strong>Descargar de todos modos</strong>.</li>
         <li>Si el navegador dice que el archivo «no se descarga habitualmente», ábrelo desde las descargas y elige <strong>Conservar</strong> (en Edge: <strong>…</strong> → <strong>Conservar</strong> → <strong>Mostrar más</strong> → <strong>Conservar de todos modos</strong>).</li>
         <li>Ábrelo. Si Windows muestra «Windows protegió su PC», pulsa <strong>Más información</strong> y después <strong>Ejecutar de todas formas</strong>. Es normal: el instalador aún no tiene firma comercial.</li>
-        <li>Lee y acepta las condiciones de uso, pulsa <strong>Instalar</strong> y, al terminar, <strong>Finalizar</strong>: YKY se abre solo. Sigue con el capítulo 1.</li>
+        <li>Lee y acepta las condiciones de uso, pulsa <strong>Instalar</strong> y, al terminar, <strong>Finalizar</strong>: YKY se abre solo. Sigue con el <strong>capítulo 1, sin saltarte nada</strong> (justo debajo).</li>
         <li><strong>Tu licencia:</strong> en YKY, ve a <strong>Ajustes → Licencia</strong>, copia tu <strong>código de equipo</strong> y envíamelo por WhatsApp o a <a href="mailto:yky@nutriku.com">yky@nutriku.com</a>. Te responderé con una clave: pégala en <strong>Activar licencia</strong> y pulsa <strong>Activar</strong>. Mientras tanto puedes practicar con la demostración.</li>
       </ol>
       <p class="paso0-nota">Necesitas Windows 10 u 11 de 64 bits, 4 GB de memoria y 1 GB libre. Si no encuentras el enlace o tu antivirus bloquea el instalador, escríbeme y lo vemos.</p>
@@ -70,6 +79,20 @@
     </ul>
   </aside>
 
+  <section class="crucial" aria-labelledby="crucial-titulo">
+    <span class="marca-aviso">Imprescindible</span>
+    <h2 id="crucial-titulo">Antes de tu primera paciente: mira el capítulo 1 entero y haz cada paso</h2>
+    <p>Son dos minutos. Ahí dejas YKY protegido, y lo que configuras en él no se puede arreglar después si ya ha pasado algo.</p>
+    <ul>
+      <li><strong>Tu contraseña</strong>Cifra todos tus datos. Sin ella nadie puede abrirlos, ni siquiera yo.</li>
+      <li><strong>La clave de recuperación</strong>Imprímela o guárdala fuera del ordenador. Si olvidas la contraseña y no tienes la clave, no hay forma de recuperar a tus pacientes.</li>
+      <li><strong>Las copias de seguridad automáticas</strong>En un USB o en una carpeta de OneDrive o Google Drive. Si el ordenador se rompe o te lo roban, es lo único que te devuelve tu consulta.</li>
+      <li><strong>Tu licencia</strong>Para poder crear y editar. Mientras te la envío, practica con la demostración.</li>
+    </ul>
+    <p class="cierre">Los capítulos 2, 3 y 4 son para orientarte: míralos cuando quieras. <strong>El 1, no: hazlo antes de registrar a tu primera paciente.</strong></p>
+    <button type="button" class="boton menta grande" id="ver-cap1">Ver el capítulo 1</button>
+  </section>
+
   <div class="reproductor">
     <div class="pantalla">
       <video id="video" controls preload="metadata" playsinline poster="video/capitulo-1.jpg">
@@ -79,7 +102,7 @@
     </div>
     <div>
       <ol class="capitulos" id="capitulos">
-        <li><button type="button" data-n="1" aria-current="true"><span class="num">1</span><span><strong>La primera vez que abres YKY</strong><span class="que">Condiciones, contraseña, clave de recuperación, licencia y copias de seguridad</span></span><span class="dur">2:02</span></button></li>
+        <li><button type="button" data-n="1" aria-current="true"><span class="num">1</span><span><strong>La primera vez que abres YKY</strong><span class="que">Condiciones, contraseña, clave de recuperación, licencia y copias de seguridad</span><span class="imprescindible">Imprescindible</span></span><span class="dur">2:02</span></button></li>
         <li><button type="button" data-n="2"><span class="num">2</span><span><strong>Configura tu consulta</strong><span class="que">Membrete, tipos de sesión y precios, bonos, horario y videollamada</span></span><span class="dur">1:18</span></button></li>
         <li><button type="button" data-n="3"><span class="num">3</span><span><strong>Tu primera sesión</strong><span class="que">Alta, cita, consentimiento firmado, entrevista, GAD-7, nota de sesión y objetivo</span></span><span class="dur">2:35</span></button></li>
         <li><button type="button" data-n="4"><span class="num">4</span><span><strong>Después de la sesión</strong><span class="que">Cobro y recibo, próxima cita, recordatorio, cuestionario para casa y evolución</span></span><span class="dur">1:19</span></button></li>
@@ -125,6 +148,10 @@
     if (reproducir) video.play().catch(() => {});
   }
   botones.forEach((b) => b.addEventListener('click', () => poner(Number(b.dataset.n), true)));
+  document.getElementById('ver-cap1').addEventListener('click', () => {
+    poner(1, true);
+    document.querySelector('.reproductor').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
   video.addEventListener('ended', () => { if (actual < botones.length) poner(actual + 1, true); });
 })();
 </script>
